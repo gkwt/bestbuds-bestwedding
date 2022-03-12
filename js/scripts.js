@@ -218,7 +218,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== '2acb3374193eacfdc8c704b0faab6fee') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbxgrUbYu1NxqM6UDK-EZU64dHkq0lg4G092OZ1rgozrjaupejbXihyxdbzhsUj_qaoS0Q/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbx9Cc7c1DHNkGmZMKB4Rae-JCkJ43VZZO53q44uK-CQdIHa0GbHRsyMrqIzCb6kx8-NDg/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
