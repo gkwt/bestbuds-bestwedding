@@ -808,7 +808,7 @@ RSVP form
       position: relative;
 
       i {
-        color: $accent-color;
+        color: $icon-color;
         font-size: 14px;
       }
       i:after {
@@ -821,7 +821,7 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, .fa-key {
+      i.fa-user, i.fa-users, i.fa-envelope, .fa-key, .fa-map {
         font-size: 14px;
         position: absolute;
         top: 50%;
