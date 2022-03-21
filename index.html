@@ -18,11 +18,9 @@
     <meta property="og:description" content="We would like to invite you to our big day.">
     <meta property="og:image" content="https://gkwt.xyz/bestbuds-bestwedding/img/hero-min.jpg">
     <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -63,13 +61,9 @@
             </div>
         </header>
     </section>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="hero-content text-center">
-                    <!-- <img src="img/logo-lg.png"> -->
-                </div>
-            </div>
+            
         </div>
         <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
@@ -78,14 +72,21 @@
             <div class="col-sm-4 hidden-xs"></div>
         </div>
     </div>
-    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
+    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div> -->
 </section>
 
 <section id="invitation" class="section-padding">
     <div class="container">
         <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <img src="img/logo-lg.png">
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-12 text-center">
-                <h3>We're getting married and it'll be epic. Save the date!</h3>
+                <h3>We're getting married. Save the date!</h3>
                 <p>
                     The wedding will be in beautiful Vancouver, B.C. on the 10<sup>th</sup> of Septemer 2022 and it would 
                     mean a lot to us for you to be there with us!
@@ -96,7 +97,7 @@
                     have promotion deals for hotels, so please indicate if you want to arrange for accomodations as well (you're 
                     also free to pick your own hotels).
                 </p>
-                <div class="share-bar"></div>
+                <!-- <div class="share-bar"></div> -->
             </div>
         </div>
     </div>
@@ -122,7 +123,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3>What're you waiting for? Please come! <br><br><br> <small>please...</small> </h3>
+                <h3>What're you waiting for? Please come! <small>please...</small> </h3>
                 <p>Please RSVP by June 10<sup>th</sup>, 2022.</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
@@ -131,14 +132,14 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
+                                                                     placeholder="Your email*"
                                                                      required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
+                                                                 placeholder="Your full name*"
                                                                  required>
                             </div>
                         </div>
@@ -148,7 +149,7 @@
                             <div class="form-input-group">
                                 <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
                                                                   max="4"
-                                                                  placeholder="Number of plus-ones"
+                                                                  placeholder="Number of plus-ones*"
                                                                   required>
                             </div>
                         </div>
@@ -156,11 +157,69 @@
                             <div class="form-input-group">
                                 <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
                                                                 class="" min="0"
-                                                                placeholder="Invite code"
+                                                                placeholder="Invite code*"
                                                                 required>
                             </div>
                         </div>
                     </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input type="text" name="guest_1" class=""
+                                                                     placeholder="Full name of plus-one"
+                                                                     optional>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input type="text" name="guest_2" class=""
+                                                                     placeholder="Full name of plus-one"
+                                                                     optional>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input type="text" name="guest_3" class=""
+                                                                     placeholder="Full name of plus-one"
+                                                                     optional>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input type="text" name="guest_4" class=""
+                                                                     placeholder="Full name of plus-one"
+                                                                     optional>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="accomodations" class="" min="0"
+                                                                  max="4"
+                                                                  placeholder="Number of adults for hotel (leave blank if no hotel)"
+                                                                  optional>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="text" name="mailing_address" class="" 
+                                                                  placeholder="Mailing address for official invite (if you want it mailed to you)"
+                                                                  optional>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
