@@ -30,6 +30,12 @@
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+        h2 {
+            text-shadow: 2px 2px 3px  #3d7a8aad, -3px -3px 4px  #3d7a8aad, 3px -3px 4px  #3d7a8aad, -3px 3px 4px  #3d7a8aad;
+            display: inline;
+        }
+    </style>
 </head>
 <body id="top">
 <!--[if lt IE 8]>
@@ -40,18 +46,19 @@
     <section class="navigation">
         <header>
             <div class="header-content">
+                <!-- <div class="logo"><a href="#"><img width="30" height="30" src="img/logo.png" alt="Logo"></a></div> -->
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <li><a href="#invitation">Save the date</a></li>
-                            <!-- <li><a href="#events">Events</a></li>
-                            <li><a href="#instagram">Instagram</a></li>
-                            <li><a href="#eng-pics">Engagement</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li> -->
+                            <li><h2><a href="#invitation">Invitation</a></h2></li>
+                            <li><h2><a href="#events">Events</a></h2></li>
+                            <li><h2><a href="#registry">Registry</a></h2></li>
+                            <li><h2><a href="#eng-pics">Engagement</a></h2></li>
+                            <!-- <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li> -->
                         </ul>
                         <ul class="member-actions">
                             <!-- <li><a href="#map" class="login">Venue</a></li> -->
-                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                            <!-- <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li> -->
                         </ul>
                     </nav>
                 </div>
@@ -81,27 +88,23 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="hero-content text-center">
                     <img src="img/logo-lg.png" class="img-responsive center-block">
+                    <!-- <img src="img/invite.png" class="img-responsive center-block"> -->
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>Save the date! We are getting married.</h3>
+                <h3>We are getting married!</h3>
                 <div class="hashtags">#bestbuds-bestwedding</div>
                 <br>
                 <p>
-                    Our wedding will be on Saturday, September 10<sup>th</sup>, 2022 in beautiful Vancouver, British Columbia.
+                    Our wedding will be on <strong>Saturday, September 10<sup>th</sup>, 2022</strong> in beautiful Vancouver, British Columbia.
                 </p>
                 <p>
-                    It would mean <u>A LOT</u> to us for you to be there on our special day!
+                    Thank you for RSVPing. And we are excited to see you there! Details of the events and locations are below.
                 </p>
                 <p>
-                    Please RSVP by filling out your information below. If you wish to receive the official invitation by mail, 
-                    please provide your mailing address, otherwise we will send you an electronic copy of the invitation.
-                </p>
-                <p>
-                    If you are coming from out of town, we are working with hotels to provide preferred rates to guests attending our wedding.
-                    Please indicate below if you require accommodations and we will reach out to you with more details.
+                    By the way, come back around <strong>early August</strong> (don't worry, we will remind you by email). You will need to fill out your food preferences and allergies for the reception.
                 </p>
                 <!-- <div class="share-bar"></div> -->
             </div>
@@ -109,133 +112,170 @@
     </div>
 </section>
 
-<section class="rsvp text-center" id="rsvp">
 
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are excited to have you join us on our big day.</p>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
+<section class="events section-padding" id="events">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h3>So... what you waiting for??</h3>
-		<!-- <p>Please RSVP by <b>June 10<sup>th</sup>, 2022</b>.</p> -->
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email*"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your full name*"
-                                                                 required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Number of plus-ones*"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code*"
-                                                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                   <input type="checkbox" name="accomodations" class="" optional>  I need accommodations
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-12">
+                <h3 class="header">Events</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="wp3">
+                    <!-- <p><strong>Wedding Ceremony</strong></p> -->
 
-                    <hr>
+                    <h5>Wedding Ceremony <span class="time">1:00PM - 2:00PM</span></h5>
+                    <p> Canadian Martyrs Catholic Church<br>
+                    5771 Granville Avenue<br>
+                    Richmond, British Columbia, Canada<br> </p>
+                    
 
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input type="text" name="guest_1" class=""
-                                                                     placeholder="Full name of plus-one"
-                                                                     optional>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input type="text" name="guest_2" class=""
-                                                                     placeholder="Full name of plus-one"
-                                                                     optional>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input type="text" name="guest_3" class=""
-                                                                     placeholder="Full name of plus-one"
-                                                                     optional>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input type="text" name="guest_4" class=""
-                                                                     placeholder="Full name of plus-one"
-                                                                     optional>
-                            </div>
-                        </div>
-                    </div>
+                    <p>Doors open at 12:30pm</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <div class="wp4">
+                    <h5>Reception <span class="time">5:30PM-late</span></h5>
+                    <p>
+                        Shangri-la Vancouver<br>
+                        6th Floor, Conway Ballroom<br>
+                        1128 West Georgia Street<br>
+                        Vancouver, British Columbia, Canada<br>
+                    </p>
+                    <p>Cocktail hour at 5:30pm to 6:30pm. Dinner starts at 6:30pm.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row section-padding">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <p><strong>Dress code: Formal</strong></p>
+                <p>Nice suits and dresses. Dress to impress &#128521</p>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-xs-12 section-border section-padding">
+            </div>
+        </div>-->
+    </div>
 
+</section>
 
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="form-input-group">
-                                <i class="fa fa-map"></i><input type="text" name="mailing_address" class="" 
-                                                                  placeholder="Mailing address for official invite (otherwise electronic copy)"
-                                                                  optional>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">
-                        <b>YIPPEEEEE!!!</b>
-                    </button>
-                </form>
+<section id="registry" class="section-padding">
+    <div class="container">
+        <!-- <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <img src="img/logo-lg.png" class="img-responsive center-block">
+                </div>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>Wedding Registry</h3>
+                <!-- <div class="hashtags">#bestbuds-bestwedding</div> -->
+                <br>
+                <p>
+                    Your presence at our wedding to celebrate our marriage is the best gift! 
+                </p>
+                <p>
+                    Because we will be flying back to Toronto after the wedding, we do not have a wedding registry.
+                </p>
+                <p> 
+                    If you would like to help us on our way, we wish to keep with our Chinese tradition and would be very grateful to receive red pocket money (<a href="https://en.wikipedia.org/wiki/Red_envelope">紅包/利是</a>). However, if you prefer to purchase a gift, feel free to surprise us in your own way. 
+                </p>
             </div>
         </div>
     </div>
 </section>
+
+
+
+<section id="eng-pics" class="section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Some pictures of us</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+                <a class="fancybox" rel="group" href="img/engagement/img1.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/engagement/img1-min.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/engagement/img2.png">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/engagement/img2-min.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/engagement/img3.png">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/engagement/img3-min.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/engagement/img4.png">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/engagement/img4-min.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/engagement/img5.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/engagement/img5-min.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <!-- <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4119-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/NGP_4119-sm.jpg" alt=""/>
+                    </div>
+                </a> -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row hidden-lg hidden-md hidden-xs">
+            <div class="col-xs-12 section-border section-padding"></div>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-md-12">
+            <div class="diamond floating-logo">
+                <img src="img/sketch-logo.png" alt="Sketch Logo">
+                <div class="ring"></div>
+            </div>
+        </div>
+    </div>-->
+</section>
+
 
 <footer>
     <div class="container">
