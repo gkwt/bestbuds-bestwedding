@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/all.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <style>
         h2 {
@@ -53,7 +53,8 @@
                             <li><h2><a href="#invitation">Invitation</a></h2></li>
                             <li><h2><a href="#events">Events</a></h2></li>
                             <li><h2><a href="#registry">Registry</a></h2></li>
-                            <li><h2><a href="#eng-pics">Engagement</a></h2></li>
+			    <li><h2><a href="#meal">Meal Selection</a></h2></li>
+                            <li><h2><a href="#eng-pics">Engagement</a></h2></li> 
                             <!-- <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li> -->
                         </ul>
                         <ul class="member-actions">
@@ -102,9 +103,6 @@
                 </p>
                 <p>
                     Thank you for RSVPing. And we are excited to see you there! Details of the events and locations are below.
-                </p>
-                <p>
-                    By the way, come back around <strong>early August</strong> (don't worry, we will remind you by email). You will need to fill out your food preferences and allergies for the reception.
                 </p>
                 <!-- <div class="share-bar"></div> -->
             </div>
@@ -188,6 +186,130 @@
         </div>
     </div>
 </section>
+
+
+<section class="meal text-center" id="meal">
+
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Thank you!</h3>
+                        <p>Deliciousness awaits...</p>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>Meal selection</h3>
+		<p>Please select one per person, and tell us about any allergies or food restrictions. If you are bringing a plus-one, please make a separate submission.</p>
+		<p>Respond by <b>August 14th</b>. You will not be able to change the selection after the deadline. If we do not get a response, we will make a choice on your behalf, and the chef will not be able to cater to your dietary restrictions.</p>
+                <form id="meal-form" class="meal-form"
+                      action=""
+                      method="POST">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Your full name*"
+                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+		    <hr>
+		    <!---
+		    <h4>
+			    Appetizer
+		    </h4>
+		    <p>Cioppino Seafood Stew / Salad (vegetarian) </p>
+		    ---!>
+		    <h4>
+		            Main (please choose one)
+		    </h4>
+		    <br>
+		    <div class="row">
+			<div class="col-md-12 col-sm-12">
+			    <div class="form-input-group">
+				<i class="fa fa-fish-fins"></i>
+				<label for="fish">
+				    <input type="radio" name="main" id="fish"/>
+				    Halibut
+				</label>
+			    </div>
+			</div>
+
+			<div class="col-md-12 col-sm-12">
+			    <div class="form-input-group">
+				<i class="fa fa-cow"></i>
+				<label for="cow">
+				<input type="radio" name="main" id="cow"/>
+				Beef Striploin</label>
+			    </div>
+			</div>
+
+			<div class="col-md-12 col-sm-12">
+			    <div class="form-input-group">
+				<i class="fa fa-leaf"></i>
+				<label for="vege">
+				<input type="radio" name="main" id="vege"/>
+				Pasta Pomodoro (vegetarian)</label>
+			    </div>
+			</div>
+		    </div>
+		    <!--- <br>
+		    <h4>
+			Dessert
+		    </h4>
+		    <p>Strawberry Semifreddo </p>
+		    ---!>
+		    <br>
+		    <p>
+		    The appetizer will have seafood. Please check the box if you do not want to have seafood or are allergic to it.
+		    </p>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                   <input type="checkbox" name="seafood" class="" optional>  I don't like seafood!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+		    <br>
+		    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-exclamation-circle"></i><input type="text" name="restrictions" class=""
+								 placeholder="Allergies and dietary restrictions"
+								 optional>
+                            </div>
+                        </div>
+		    </div>
+
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn">
+                        <b>Food looks good to me!</b>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+		    
+
 
 
 
